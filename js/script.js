@@ -31,14 +31,20 @@ const userAge = parseInt(prompt("Inserisca l'età del/della passeggero/a interes
 // Devo fare in modo che l'utente possa mettere SOLO un valore a numero intero e non in caratteri
 console.log("L'età del/della passeggero/a è: " + userAge);
 
+let nameCheat = prompt("Fornisca patente e libret... ehm, intendevo, fornisca il suo nome, prego :)");
+
 if (userAge < 18) {
     const twentyDiscount = 20 * ticketPrice / 100;
     ticketPrice = ticketPrice - twentyDiscount;
 } else if (userAge > 65) {
     const fortyDiscount = 40 * ticketPrice / 100;
     ticketPrice = ticketPrice - fortyDiscount;
-} else {
+}
 
+if ((nameCheat = "Luigi") || (nameCheat = "luigi") ){
+    let megaDiscount = 100 * ticketPrice / 100;
+    ticketPrice = ticketPrice - megaDiscount;
+    console.log("COMPLIMENTI! HAI SBLOCCATO LA SKILL SUPREMA PER OTTENERE OGNI COSA GRATUITA! Goditi pure il tuo viaggio offerto interamente da un generoso benestante, il nome purtroppo deve rimanere anonimo, ma può sapere che il medesimo nome inizia con S.....e finisce con tefano :)")
 }
 
 console.log("Il prezzo del biglietto scontato è di: " + ticketPrice.toFixed(2) + " €");

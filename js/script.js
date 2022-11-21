@@ -1,18 +1,31 @@
 
-SCHEMA ESERCIZIO
+// SCHEMA ESERCIZIO
 
--Richiesta informazioni tramite prompt:
-    -Chiedo all'utente il numero di km che vuole percorrere
-    -Chiedo all'utente l'età del* passegger*
+// -Richiesta informazioni tramite prompt:
+//     -Chiedo all'utente il numero di km che vuole percorrere
+//     -Chiedo all'utente l'età del* passegger*
 
--Calcolo base secondo i km:
-    -Moltiplico il numero di km fornito dall'utente, per 0.21 €
+// -Calcolo base secondo i km:
+//     -Moltiplico il numero di km fornito dall'utente, per 0.21 €
 
--Eventuali sconti da sottrarre:
-    -Se il/la passegger* ha meno di 18 anni, allora verrà applicato uno sconto del 20% dal totale del prezzo base (Calcolato in km scelti)
-        Altrimenti non verrà applicato lo sconto
+// -Eventuali sconti da sottrarre:
+//     -Se il/la passegger* ha meno di 18 anni, allora verrà applicato uno sconto del 20% dal totale del prezzo base (Calcolato in km scelti)
+//         Altrimenti non verrà applicato lo sconto
 
-    -Se il/la passegger* ha ha più di 65 anni, allora verrà applicato uno sconto del 40% dal totale del prezzo base (Calcolato in km scelti)
+//     -Se il/la passegger* ha ha più di 65 anni, allora verrà applicato uno sconto del 40% dal totale del prezzo base (Calcolato in km scelti)
 
--Prezzo finale da presentare:
-    Emettere il totale con eventuali sconti già sottratti, con un massimo di due decimali (per indicare i centesimi sul prezzo)
+// -Prezzo finale da presentare:
+//     Emettere il totale con eventuali sconti già sottratti, con un massimo di due decimali (per indicare i centesimi sul prezzo)
+
+const priceForKm = 0.21;
+
+console.log("Il prezzo base al chilometro è di: " +  priceForKm + " €" );
+
+const userKilometres = parseInt(prompt("Salve, quanti chilometri vorrebbe percorrere?"));
+
+const basePrice = (priceForKm * userKilometres);
+
+console.log("Il prezzo base del biglietto è di: " + basePrice.toFixed(2) + " €")
+
+
+document.getElementById("output").innerHTML = "Il prezzo del suo biglietto corrisponde a: " ;

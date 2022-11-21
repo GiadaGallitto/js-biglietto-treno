@@ -22,10 +22,24 @@ const priceForKm = 0.21;
 console.log("Il prezzo base al chilometro è di: " +  priceForKm + " €" );
 
 const userKilometres = parseInt(prompt("Salve, quanti chilometri vorrebbe percorrere?"));
-
+// Devo fare in modo che l'utente possa mettere SOLO un valore a numero intero e non in caratteri
 const basePrice = (priceForKm * userKilometres);
 
-console.log("Il prezzo base del biglietto è di: " + basePrice.toFixed(2) + " €")
+console.log("Il prezzo base del biglietto è di: " + basePrice.toFixed(2) + " €");
+
+const userAge = parseInt(prompt("Inserisca l'età del/della passeggero/a interessato/a"));
+// Devo fare in modo che l'utente possa mettere SOLO un valore a numero intero e non in caratteri
+console.log("L'età del/della passeggero/a è: " + userAge);
+
+const twentyDiscount = 20 * basePrice / 100;
+
+if (userAge < 18) {
+    const twentyDiscount = true
+} else {
+    const twentyDiscount = false
+}
+
+console.log("Lo sconto applicato sarà di: " + twentyDiscount.toFixed(2) + " €")
 
 
 document.getElementById("output").innerHTML = "Il prezzo del suo biglietto corrisponde a: " ;

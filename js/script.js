@@ -41,7 +41,7 @@ if (userAge < 18) {
     ticketPrice = ticketPrice - fortyDiscount;
 }
 
-if ((nameCheat = "Luigi") || (nameCheat = "luigi") ){
+if ((nameCheat === "Luigi") || (nameCheat === "luigi") ){
     let megaDiscount = 100 * ticketPrice / 100;
     ticketPrice = ticketPrice - megaDiscount;
     console.log("COMPLIMENTI! HAI SBLOCCATO LA SKILL SUPREMA PER OTTENERE OGNI COSA GRATUITA! Goditi pure il tuo viaggio offerto interamente da un generoso benestante, il nome purtroppo deve rimanere anonimo, ma può sapere che il medesimo nome inizia con S.....e finisce con tefano :)")
